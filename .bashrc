@@ -15,6 +15,10 @@ fi
 	#source /afs/tu-chemnitz.de/global/capp/pgi-6.1/setup.sh
 #fi
 
+if [ -f /usr/local/server/intel/Composer/composerxe-2011.1.107/bin/compilervars.sh ]; then
+	source /usr/local/server/intel/Composer/composerxe-2011.1.107/bin/compilervars.sh intel64
+fi
+
 if [[ `hostname` = frog* ]]; then
 #       echo "Welcome on `hostname`"
         if [ -f /cluster2/rhab/.bashrc ]; then
