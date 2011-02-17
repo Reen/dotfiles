@@ -1,4 +1,8 @@
-filetype off
+if exists("*pathogen#helptags")
+	filetype off
+	call pathogen#helptags()
+	call pathogen#runtime_append_all_bundles()
+endif
 filetype plugin indent on
 
 set nocompatible
@@ -62,16 +66,17 @@ vmap <tab> %
 set nowrap
 "set textwidth=79
 "set formatoptions=qrn1
-set colorcolumn=85
+if exists("&colorcolumn")
+	set colorcolumn=85
+endif
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
-set listchars=tab:▸\ ,eol:¬
 
 " Color scheme (terminal)
 syntax on
 "set background=dark
-colorscheme fruidle
+"colorscheme fruidle
 
 " Use Pathogen to load bundles
 call pathogen#runtime_append_all_bundles()
@@ -84,8 +89,11 @@ call pathogen#helptags()
 "set ofu=syntaxcomplete#Complete
 
 if has('gui_running')
+	set listchars=tab:▸\ ,eol:¬
 	" Fuck you, help key.
-	set fuoptions=maxvert,maxhorz
+	if exists("&fuoptions")
+		set fuoptions=maxvert,maxhorz
+	endif
 	inoremap <F1> <ESC>
 	nnoremap <F1> <ESC>
 	vnoremap <F1> <ESC>
@@ -177,4 +185,4 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 
 
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
