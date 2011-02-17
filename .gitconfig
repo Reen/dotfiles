@@ -2,19 +2,38 @@
 	email = rene@habr.de
 	name = René Haber
 [color]
-	branch = auto
-	status = auto
 	diff = auto
-	ui = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 [pack]
 	threads = 0
 [alias]
-        st = status
-        ci = commit
-        br = branch
-        co = checkout
-        df = diff
-        lg = log -p
-        dc = diff --cached
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lp = log -p
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	dc = diff --cached
 [push]
 	default = matching
+[core]
+	whitespace=fix,trailing-space,cr-at-eol
