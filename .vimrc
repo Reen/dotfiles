@@ -118,7 +118,9 @@ let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 
 " Exuberant ctags!
-let Tlist_Ctags_Cmd = "/sw/bin/ctags"
+if filereadable("/sw/bin/ctags")
+	let Tlist_Ctags_Cmd = "/sw/bin/ctags"
+endif
 let Tlist_WinWidth = 50
 let Tlist_Use_Right_Window = 1
 let Tlist_Compact_Format = 1

@@ -31,6 +31,9 @@ export LESS="-erX"
 export HISTCONTROL=erasedups
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
+if echo hello|grep --color=auto l >/dev/null 2>&1; then
+	export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+fi
 #export PYTHONPATH="/afs/tu-chemnitz.de/home/urz/r/rhab/lib/python:/afs/tu-chemnitz.de/home/urz/r/rhab/lib64/python"
 shopt -s cdspell # This will correct minor spelling errors in a cd command.
 shopt -s histappend

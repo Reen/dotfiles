@@ -1,6 +1,6 @@
 #!/bin/bash
 # get dotfiles
-dotfiles=$(ls -la | grep -v ^d | awk '{print $8}'| grep -v ^coming-home.bash$ )
+dotfiles=$(ls -la | grep -v ^d | awk '{print $8}'| grep -v ^coming-home.bash$| grep -v ^.gitmodules$ )
 mode=${1:-normal}
  
 for x in $dotfiles; do
