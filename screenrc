@@ -1,0 +1,9 @@
+altscreen on
+startup_message off
+bindkey ^[[D prev
+bindkey ^[[C next
+hardstatus alwayslastline
+hardstatus string '%{kg}[ %{kG}%H %{kg}][%= %{kw}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+defutf8 on
+caption always "%?%{wk}[%h]%?"
+
