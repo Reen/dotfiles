@@ -1,36 +1,36 @@
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/repeat"]
-	path = .vim/bundle/repeat
+[submodule "vim/bundle/repeat"]
+	path = vim/bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/git"]
-	path = .vim/bundle/git
+[submodule "vim/bundle/git"]
+	path = vim/bundle/git
 	url = git://github.com/tpope/vim-git.git
-[submodule ".vim/bundle/surround"]
-	path = .vim/bundle/surround
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/matchit"]
-	path = .vim/bundle/matchit
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
 	url = git://github.com/tsaleh/vim-matchit.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
 	url = git://github.com/tsaleh/vim-supertab.git
-[submodule ".vim/bundle/snipmate"]
-	path = .vim/bundle/snipmate
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule ".vim/bundle/ack"]
-	path = .vim/bundle/ack
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule ".vim/bundle/yankring"]
-	path = .vim/bundle/yankring
+[submodule "vim/bundle/yankring"]
+	path = vim/bundle/yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
-[submodule ".vim/bundle/taglist"]
-	path = .vim/bundle/taglist
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
 	url = git://github.com/mexpolk/vim-taglist.git
