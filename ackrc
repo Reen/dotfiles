@@ -1,0 +1,2 @@
+# file type for cakephp
+--type-add=cake=.php,.ctp
