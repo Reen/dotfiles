@@ -32,8 +32,16 @@
 	df = diff
 	lp = log -p
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	dc = diff --cached
+	dc = diff --cached --no-ext-diff
+	wtf = !git-wtf
 [push]
 	default = matching
 [core]
 	whitespace=fix,trailing-space,cr-at-eol
+[rerere]
+	enabled = true
+[merge]
+	stat = true
+[diff]
+	mnemonicprefix = true
+	renames = copies
