@@ -6,3 +6,7 @@ if [ -f /usr/local/server/intel/impi_3.2.2/bin64/mpivars.sh ]; then
         source /usr/local/server/intel/impi_3.2.2/bin64/mpivars.sh
 fi
 
+if [ -f ~/.bashrc ]; then
+      . ~/.bashrc
+fi
+. ~/.profile
