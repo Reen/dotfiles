@@ -40,3 +40,6 @@
 [submodule "vim/bundle/ljuggler"]
 	path = vim/bundle/ljuggler
 	url = git://github.com/vim-scripts/LustyJuggler.git
+[submodule "vim/bundle/autofenc"]
+	path = vim/bundle/autofenc
+	url = git://github.com/vim-scripts/AutoFenc.vim.git
