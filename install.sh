@@ -8,6 +8,10 @@ for file in `find ${PWD} -maxdepth 1 -not -name '.*' -not -name install.sh -not 
         continue
     fi
     filename=`basename "$file"`
+    if [ -h ~/.$filename ]
+    then
+        continue
+    fi
     echo "ln -s `pwd`/$filename -> ~/.$filename"
     ln -s `pwd`/$filename ~/.$filename
 done
