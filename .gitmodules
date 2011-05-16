@@ -43,3 +43,6 @@
 [submodule "vim/bundle/autofenc"]
 	path = vim/bundle/autofenc
 	url = git://github.com/vim-scripts/AutoFenc.vim.git
+[submodule "vim/bundle/commandt"]
+	path = vim/bundle/commandt
+	url = git://github.com/vim-scripts/Command-T.git
