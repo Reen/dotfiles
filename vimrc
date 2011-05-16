@@ -76,7 +76,7 @@ set list
 " Color scheme (terminal)
 syntax on
 "set background=dark
-"colorscheme fruidle
+colorscheme fruidle
 
 " Use Pathogen to load bundles
 call pathogen#runtime_append_all_bundles()
@@ -185,6 +185,7 @@ function! AppendModeline()
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
-
-
-"autocmd VimEnter * NERDTree
+" allow loading of project specific .vimrc
+set exrc
+set secure
+autocmd VimEnter * NERDTree
