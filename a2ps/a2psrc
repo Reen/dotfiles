@@ -1,1 +1,2 @@
-Options: --sides=tumble -C
+Options: --sides=tumble -C -t4
+Printer: pdf | ps2pdf -sPAPERSIZE=a4 - > ${HOME}/Desktop/$N.pdf
