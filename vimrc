@@ -116,6 +116,7 @@ nmap <leader>m :make<cr>
 map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
 
 " Exuberant ctags!
 if filereadable("/sw/bin/ctags")
