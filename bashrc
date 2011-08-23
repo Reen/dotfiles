@@ -86,6 +86,9 @@ export CLICOLOR='yes'
 if [[ -x /sw/bin/gls ]]; then
 	alias ls='/sw/bin/gls --color=always --group-directories-first'
 fi
+if [[ $platform == 'linux' ]]; then
+	alias ls='ls --color=auto'
+fi
 alias ll='ls -lah'
 alias la='ls -a'
 alias l='ls -la'
