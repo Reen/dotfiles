@@ -90,10 +90,10 @@ call pathogen#helptags()
 
 if has('gui_running')
 	set listchars=tab:▸\ ,eol:¬
-	" Fuck you, help key.
 	if exists("&fuoptions")
 		set fuoptions=maxvert,maxhorz
 	endif
+	" Fuck you, help key.
 	inoremap <F1> <ESC>
 	nnoremap <F1> <ESC>
 	vnoremap <F1> <ESC>
