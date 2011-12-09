@@ -73,7 +73,7 @@ frog () {
 		for ((n=1; n < 12; n++))
 		do
 			name=`printf "frog%02d" "$n"`
-			ssh -i ~/id_rsa -fCT "rhab@${name}.physik.tu-chemnitz.de" "echo ${name}" '`uptime`'
+			ssh -i ~/frog_rsa -fCT "rhab@${name}.physik.tu-chemnitz.de" "echo ${name}" '`uptime`'
 		done
 	else
 		ssh `printf "rhab@frog%02d.physik.tu-chemnitz.de" "$1"`
