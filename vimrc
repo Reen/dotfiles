@@ -83,7 +83,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 "nmap <silent> <leader>n :silent :nohlsearch<CR>
-"set listchars=tab:>-,trail:·,eol:$
+set listchars=tab:>-,trail:·,eol:$
 "nmap <silent> <leader>s :set nolist!<CR>
 
 "set ofu=syntaxcomplete#Complete
