@@ -55,3 +55,6 @@
 [submodule "vim/bundle/powerline"]
 	path = vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/threesome"]
+	path = vim/bundle/threesome
+	url = git://github.com/sjl/threesome.vim.git
