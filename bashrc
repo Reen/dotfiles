@@ -24,11 +24,20 @@ fi
 if [ -d $HOME/usr/bin ]; then
 	PATH=$HOME/usr/bin:$PATH
 fi
+
+if [ -d /opt/parallel/bin ]; then
+	PATH=/opt/parallel/bin:$PATH
+fi
+
+if [ -d /usr/local/cuda ]; then
+	PATH=/usr/local/cuda/bin:$PATH
+fi
+
 if [ -d /usr/local/texlive/2011/bin/x86_64-linux ]; then
 	PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH
 fi
 # on TUC maschines, load intel and pgi compilers
-if [[ $platform == 'Linux' && -e /afs/tu-chemnitz.de/global/capp/intel-11.1 && -z "$PS1" ]]; then
+if [[ $platform == 'linux' && -e /afs/tu-chemnitz.de/global/capp/intel-11.1 && -z "$PS1" ]]; then
 	source /afs/tu-chemnitz.de/global/capp/intel-11.1/cc_setup.sh
 	source /afs/tu-chemnitz.de/global/capp/intel-11.1/fc_setup.sh
 	source /afs/tu-chemnitz.de/global/capp/pgi-6.1/setup.sh
@@ -90,7 +99,7 @@ if [[ -x /sw/bin/gls ]]; then
 	alias ls='/sw/bin/gls --color=always --group-directories-first'
 fi
 if [[ $platform == 'linux' ]]; then
-	alias ls='ls --color=auto'
+	alias ls='ls --color=auto  --group-directories-first'
 fi
 alias ll='ls -lah'
 alias la='ls -a'
