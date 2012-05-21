@@ -25,6 +25,10 @@ if [ -d $HOME/usr/bin ]; then
 	PATH=$HOME/usr/bin:$PATH
 fi
 
+if [ -d /opt/gnuplot/bin ]; then
+	PATH=/opt/gnuplot/bin:$PATH
+fi
+
 if [ -d /opt/parallel/bin ]; then
 	PATH=/opt/parallel/bin:$PATH
 fi
