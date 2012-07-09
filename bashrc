@@ -130,7 +130,6 @@ tar_bz2_rm () {
 		echo "Done.";
 	fi
 }
-if [ -e ~/usr/autojump/autojump.bash ]; then
-    source ~/usr/autojump/autojump.bash
-fi
+
+[[ -s ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
 
