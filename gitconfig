@@ -45,3 +45,5 @@
 [diff]
 	mnemonicprefix = true
 	renames = copies
+[gui]
+	spellingdictionary = en_GB
