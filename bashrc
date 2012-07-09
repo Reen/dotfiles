@@ -20,10 +20,6 @@ fi
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-# check if I have my own usr/bin
-if [ -d $HOME/usr/bin ]; then
-	PATH=$HOME/usr/bin:$PATH
-fi
 
 if [ -d /opt/gnuplot/bin ]; then
 	PATH=/opt/gnuplot/bin:$PATH
@@ -40,6 +36,12 @@ fi
 if [ -d /usr/local/texlive/2011/bin/x86_64-linux ]; then
 	PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH
 fi
+
+# check if I have my own usr/bin
+if [ -d $HOME/usr/bin ]; then
+	PATH=$HOME/usr/bin:$PATH
+fi
+
 # on TUC maschines, load intel and pgi compilers
 if [[ $platform == 'linux' && -e /afs/tu-chemnitz.de/global/capp/intel-11.1 && -z "$PS1" ]]; then
 	source /afs/tu-chemnitz.de/global/capp/intel-11.1/cc_setup.sh
