@@ -58,3 +58,6 @@
 [submodule "vim/bundle/yankring-new"]
 	path = vim/bundle/yankring-new
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "vim/bundle/align"]
+	path = vim/bundle/align
+	url = git://github.com/vim-scripts/Align.git
