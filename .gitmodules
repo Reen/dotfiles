@@ -25,9 +25,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = git://github.com/thisivan/vim-taglist.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
@@ -37,9 +34,6 @@
 [submodule "vim/bundle/autofenc"]
 	path = vim/bundle/autofenc
 	url = git://github.com/vim-scripts/AutoFenc.vim.git
-[submodule "vim/bundle/commandt"]
-	path = vim/bundle/commandt
-	url = git://github.com/vim-scripts/Command-T.git
 [submodule "vim/bundle/mw-utils"]
 	path = vim/bundle/mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -61,3 +55,27 @@
 [submodule "vim/bundle/align"]
 	path = vim/bundle/align
 	url = git://github.com/vim-scripts/Align.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/numbers"]
+	path = vim/bundle/numbers
+	url = git://github.com/myusuf3/numbers.vim.git
+[submodule "vim/bundle/neocomplcache"]
+	path = vim/bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "vim/bundle/piv"]
+	path = vim/bundle/piv
+	url = git://github.com/spf13/PIV.git
+[submodule "vim/bundle/easymotion"]
+	path = vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = git://github.com/tpope/vim-abolish.git

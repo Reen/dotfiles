@@ -28,14 +28,32 @@ set wildmode=list:longest
 set visualbell
 "set cursorline
 set ttyfast
-set ruler
 set backspace=indent,eol,start
 "set relativenumber
 set number
-set laststatus=2
 "set undofile
 set title
 set history=1000
+set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
+
+if has('cmdline_info')
+	set ruler " show the ruler
+	set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+	set showcmd " show partial commands in status line and
+				" selected characters/lines in visual mode
+endif
+
+if has('statusline')
+	set laststatus=2
+
+	" Broken down into easily includeable segments
+	set statusline=%<%f\ " Filename
+	set statusline+=%w%h%m%r " Options
+	set statusline+=%{fugitive#statusline()} " Git Hotness
+	set statusline+=\ [%{&ff}/%Y] " filetype
+	set statusline+=\ [%{getcwd()}] " current dir
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif
 
 " Leader and mappings for leader
 let mapleader = ","
@@ -119,17 +137,22 @@ let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 
 " Exuberant ctags!
+set tags=./tags;/,~/.vimtags
 if filereadable("/sw/bin/ctags")
-	let Tlist_Ctags_Cmd = "/sw/bin/ctags"
+	let g:tagbar_ctags_bin= "/sw/bin/ctags"
 endif
-let Tlist_WinWidth = 50
-let Tlist_Use_Right_Window = 1
-let Tlist_Compact_Format = 1
+"let Tlist_WinWidth = 50
+"let Tlist_Use_Right_Window = 1
+"let Tlist_Compact_Format = 1
 "let Tlist_Display_Prototype = 1
-let Tlist_Close_On_Select = 1
-let tlist_php_settings = 'php;c:class;f:function'
-map <F4> :TlistOpen<cr>
-map <F5> :!/sw/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude='@.ctagsignore' .<cr>
+"let Tlist_Close_On_Select = 1
+"let tlist_php_settings = 'php;c:class;f:function'
+map <F4> :TagbarToggle<cr>
+"map <F5> :!/sw/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude='@.ctagsignore' .<cr>
+
+"CtrlP
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Yankring
 nnoremap <silent> <F3> :YRShow<cr>
