@@ -70,7 +70,7 @@ fi
 # common variables
 export EDITOR=vim
 export LESS="-erX"
-export HISTCONTROL=erasedups
+export HISTCONTROL=erasedups:ignorespace
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 # colorize grep
