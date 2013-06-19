@@ -151,6 +151,8 @@ let g:ctrlp_cmd = 'CtrlP'
 " Yankring
 nnoremap <silent> <F3> :YRShow<cr>
 nnoremap <silent> <leader>y :YRShow<cr>
+let g:yankring_min_element_length = 2
+"let g:yankring_history_dir = '$VIM'
 
 " LustyJuggler
 let g:LustyJugglerSuppressRubyWarning = 1
@@ -158,10 +160,16 @@ let g:LustyJugglerSuppressRubyWarning = 1
 " Ack
 nnoremap <leader>a :Ack
 
-" YankRing
-let g:yankring_min_element_length = 2
-"let g:yankring_history_dir = '$VIM'
+" ultisnip
+" declare global configuration dictionary so that config options can be added:
+let g:UltiSnips = {}
+let g:UltiSnips.ExpandTrigger = "<tab>"
+let g:UltiSnips.JumpForwardTrigger = "<tab>"
+let g:UltiSnips.JumpBackwardTrigger = "<c-k>"
+let g:UltiSnips.PyCommand = "py "
 
+
+" Other Stuff
 map fc <Esc>:call CleanClose(1)<CR>
 map fq <Esc>:call CleanClose(0)<CR>
 
