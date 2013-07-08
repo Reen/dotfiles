@@ -163,11 +163,15 @@ nnoremap <leader>a :Ack
 " ultisnip
 " declare global configuration dictionary so that config options can be added:
 let g:UltiSnips = {}
-let g:UltiSnips.ExpandTrigger = "<tab>"
-let g:UltiSnips.JumpForwardTrigger = "<tab>"
-let g:UltiSnips.JumpBackwardTrigger = "<c-k>"
+let g:UltiSnips.ExpandTrigger = "<s-tab>"
+let g:UltiSnips.JumpForwardTrigger = "<s-tab>"
+let g:UltiSnips.JumpBackwardTrigger = "<c-tab>"
 let g:UltiSnips.PyCommand = "py "
-
+let g:UltiSnips.always_use_first_snippet = 1
+let g:UltiSnips.snipmate_ft_filter = {
+    \ 'default' : {'filetypes': ["FILETYPE"] },
+    \ 'html' : {'filetypes': ["html", "javascript"] },
+    \ }
 
 " Other Stuff
 map fc <Esc>:call CleanClose(1)<CR>
