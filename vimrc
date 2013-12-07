@@ -69,7 +69,7 @@ map <leader>w <C-w>v<C-w>l " split window vertically
 " Searching
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase 
+set ignorecase
 set smartcase
 set incsearch " ...dynamically as they are typed.
 set showmatch
@@ -169,9 +169,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnips.PyCommand = "py "
 let g:UltiSnips.always_use_first_snippet = 1
 let g:UltiSnips.snipmate_ft_filter = {
-    \ 'default' : {'filetypes': ["FILETYPE"] },
-    \ 'html' : {'filetypes': ["html", "javascript"] },
-    \ }
+			\ 'default' : {'filetypes': ["FILETYPE"] },
+			\ 'html' : {'filetypes': ["html", "javascript"] },
+			\ }
 
 " Other Stuff
 map fc <Esc>:call CleanClose(1)<CR>
@@ -208,10 +208,10 @@ set printoptions=paper:A4,syntax:y,wrap:y,number:y
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
 " files.
 function! AppendModeline()
-   let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d :",
-         \ &tabstop, &shiftwidth, &textwidth)
-   let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-   call append(line("$"), l:modeline)
+	let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d :",
+				\ &tabstop, &shiftwidth, &textwidth)
+	let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+	call append(line("$"), l:modeline)
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
