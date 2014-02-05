@@ -173,6 +173,13 @@ let g:UltiSnips.snipmate_ft_filter = {
 			\ 'html' : {'filetypes': ["html", "javascript"] },
 			\ }
 
+" vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" syntastic
+let g:syntastic_php_phpcs_args = "--standard=CakePHP"
+
 " Other Stuff
 map fc <Esc>:call CleanClose(1)<CR>
 map fq <Esc>:call CleanClose(0)<CR>
