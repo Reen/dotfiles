@@ -33,8 +33,10 @@ if [ -d /usr/local/cuda ]; then
 	PATH=/usr/local/cuda/bin:$PATH
 fi
 
-if [ -d /usr/local/texlive/2011/bin/x86_64-linux ]; then
-	PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH
+if [ -d /usr/local/texlive/2013/bin/x86_64-linux ]; then
+	PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
+	INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH
+	MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:$MANPATH
 fi
 
 # check if I have my own usr/bin
