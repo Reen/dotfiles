@@ -44,20 +44,6 @@ if [ -d $HOME/usr/bin ]; then
 	PATH=$HOME/usr/bin:$PATH
 fi
 
-# on TUC maschines, load intel and pgi compilers
-if [[ $platform == 'linux' && -e /afs/tu-chemnitz.de/global/capp/intel-11.1 && -z "$PS1" ]]; then
-	source /afs/tu-chemnitz.de/global/capp/intel-11.1/cc_setup.sh
-	source /afs/tu-chemnitz.de/global/capp/intel-11.1/fc_setup.sh
-	source /afs/tu-chemnitz.de/global/capp/pgi-6.1/setup.sh
-fi
-# on frogs load extra bashrc if exists
-if [[ `hostname` = frog* ]]; then
-#	echo "Welcome on `hostname`"
-	if [ -f /cluster/rhab/.bashrc ]; then
-		. /cluster/rhab/.bashrc
-	fi
-fi
-
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (git:\1)/'
 }
@@ -85,19 +71,6 @@ export PROMPT_COMMAND="$PROMPT_COMMAND;history -a"
 
 mostUsed () {
 	history|awk '{print $2}'|sort|uniq -c|sort -rn|head
-}
-
-frog () {
-	if [ "$1" == "status" ]
-	then
-		for ((n=1; n < 12; n++))
-		do
-			name=`printf "frog%02d" "$n"`
-			ssh -i ~/frog_rsa -fCT "rhab@${name}.physik.tu-chemnitz.de" "echo ${name}" '`uptime`'
-		done
-	else
-		ssh `printf "rhab@frog%02d.physik.tu-chemnitz.de" "$1"`
-	fi
 }
 
 # make ls commands colorful
@@ -132,6 +105,3 @@ tar_bz2_rm () {
 		echo "Done.";
 	fi
 }
-
-[[ -s ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
-
