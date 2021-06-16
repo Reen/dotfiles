@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash 
 
 # Very simple install script
 

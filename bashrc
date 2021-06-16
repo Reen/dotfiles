@@ -1,47 +1,21 @@
-# Test for an interactive shell. There is no need to set anything
-# past this point for scp and rcp, and it's important to refrain from
-# outputting anything in those cases.
-if [[ $- != *i* ]]; then
-	# Shell is non-interactive. Be done now
-	return
-fi
-# Platform detection
-platform='unknown'
-unamestr=$(uname)
-if [[ "$unamestr" == 'Linux' ]]; then
-	platform='linux'
-elif [[ "$unamestr" == 'Darwin' ]]; then
-	platform='mac'
-elif [[ "$unamestr" == 'FreeBSD' ]]; then
-	platform='freebsd'
-fi
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 # load global bashrc if exists
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-if [ -d /opt/gnuplot/bin ]; then
-	PATH=/opt/gnuplot/bin:$PATH
-fi
-
-if [ -d /opt/parallel/bin ]; then
-	PATH=/opt/parallel/bin:$PATH
-fi
-
-if [ -d /usr/local/cuda ]; then
-	PATH=/usr/local/cuda/bin:$PATH
-fi
-
-if [ -d /usr/local/texlive/2013/bin/x86_64-linux ]; then
-	PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
-	INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH
-	MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:$MANPATH
-fi
-
 # check if I have my own usr/bin
 if [ -d $HOME/usr/bin ]; then
 	PATH=$HOME/usr/bin:$PATH
+fi
+
+if [ -d $HOME/.local/bin ]; then
+	PATH=$HOME/.local/bin:$PATH
 fi
 
 parse_git_branch() {
@@ -67,21 +41,18 @@ if echo hello|grep --color=auto l >/dev/null 2>&1; then
 fi
 shopt -s cdspell # This will correct minor spelling errors in a cd command.
 shopt -s histappend
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 export PROMPT_COMMAND="$PROMPT_COMMAND;history -a"
 
-mostUsed () {
-	history|awk '{print $2}'|sort|uniq -c|sort -rn|head
-}
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # make ls commands colorful
 export CLICOLOR='yes'
 # some aliases for ls
-if [[ -x /sw/bin/gls ]]; then
-	alias ls='/sw/bin/gls --color=always --group-directories-first'
-fi
-if [[ $platform == 'linux' ]]; then
-	alias ls='ls --color=auto  --group-directories-first'
-fi
+alias ls='ls --color=auto  --group-directories-first'
 alias ll='ls -lah'
 alias la='ls -a'
 alias l='ls -la'
@@ -92,16 +63,3 @@ if [[ -e ~/.bash_completion ]]; then
 	. ~/.bash_completion
 fi
 
-tar_bz2_rm () {
-	if [ "$1" != "" ]; then
-		FOLDER_IN=`echo $1 |sed -e 's/\/$//'`;
-		FILE_OUT="$FOLDER_IN.tar.bz2";
-		FOLDER_IN="$FOLDER_IN/";
-		echo "Compressing $FOLDER_IN into $FILE_OUT";
-		echo "tar cjf $FILE_OUT $FOLDER_IN";
-		tar -cjf "$FILE_OUT" "$FOLDER_IN";
-		echo "Removing $FOLDER_IN";
-		rm -rf $FOLDER_IN
-		echo "Done.";
-	fi
-}
