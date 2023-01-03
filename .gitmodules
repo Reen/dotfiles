@@ -1,84 +1,84 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = git@github.com:scrooloose/nerdtree.git
 [submodule "vim/bundle/repeat"]
 	path = vim/bundle/repeat
-	url = git://github.com/tpope/vim-repeat.git
+	url = git@github.com:tpope/vim-repeat.git
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/bundle/git"]
 	path = vim/bundle/git
-	url = git://github.com/tpope/vim-git.git
+	url = git@github.com:tpope/vim-git.git
 [submodule "vim/bundle/surround"]
 	path = vim/bundle/surround
-	url = git://github.com/tpope/vim-surround.git
+	url = git@github.com:tpope/vim-surround.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
+	url = git@github.com:mileszs/ack.vim.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
+	url = git@github.com:scrooloose/nerdcommenter.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
+	url = git@github.com:majutsushi/tagbar.git
 [submodule "vim/bundle/ljuggler"]
 	path = vim/bundle/ljuggler
-	url = git://github.com/vim-scripts/LustyJuggler.git
+	url = git@github.com:vim-scripts/LustyJuggler.git
 [submodule "vim/bundle/autofenc"]
 	path = vim/bundle/autofenc
-	url = git://github.com/vim-scripts/AutoFenc.vim.git
+	url = git@github.com:vim-scripts/AutoFenc.vim.git
 [submodule "vim/bundle/mw-utils"]
 	path = vim/bundle/mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/bundle/tlib"]
 	path = vim/bundle/tlib
-	url = git://github.com/tomtom/tlib_vim.git
+	url = git@github.com:tomtom/tlib_vim.git
 [submodule "vim/bundle/threesome"]
 	path = vim/bundle/threesome
-	url = git://github.com/sjl/threesome.vim.git
+	url = git@github.com:sjl/threesome.vim.git
 [submodule "vim/bundle/yankring-new"]
 	path = vim/bundle/yankring-new
-	url = git://github.com/vim-scripts/YankRing.vim.git
+	url = git@github.com:vim-scripts/YankRing.vim.git
 [submodule "vim/bundle/align"]
 	path = vim/bundle/align
-	url = git://github.com/vim-scripts/Align.git
+	url = git@github.com:vim-scripts/Align.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
+	url = git@github.com:kien/ctrlp.vim.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = git@github.com:scrooloose/syntastic.git
 [submodule "vim/bundle/neocomplcache"]
 	path = vim/bundle/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
+	url = git@github.com:Shougo/neocomplcache.git
 [submodule "vim/bundle/easymotion"]
 	path = vim/bundle/easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
+	url = git@github.com:Lokaltog/vim-easymotion.git
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
-	url = git://github.com/sjl/gundo.vim.git
+	url = git@github.com:sjl/gundo.vim.git
 [submodule "vim/bundle/abolish"]
 	path = vim/bundle/abolish
-	url = git://github.com/tpope/vim-abolish.git
+	url = git@github.com:tpope/vim-abolish.git
 [submodule "vim/bundle/vim-powerline"]
 	path = vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
+	url = git@github.com:Lokaltog/vim-powerline.git
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
-	url = git://github.com/MarcWeber/ultisnips.git
+	url = git@github.com:MarcWeber/ultisnips.git
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
-	url = git://github.com/honza/vim-snippets.git
+	url = git@github.com:honza/vim-snippets.git
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
-	url = git://github.com/Valloric/YouCompleteMe.git
+	url = git@github.com:ycm-core/YouCompleteMe.git
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
-	url = git://github.com/bling/vim-airline
+	url = git@github.com:bling/vim-airline
 [submodule "vim/bundle/vim-signify"]
 	path = vim/bundle/vim-signify
-	url = git://github.com/mhinz/vim-signify
+	url = git@github.com:mhinz/vim-signify
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
-	url = git://github.com/adelarsq/vim-matchit.git
+	url = git@github.com:adelarsq/vim-matchit.git
