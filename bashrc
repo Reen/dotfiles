@@ -9,15 +9,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# check if I have my own usr/bin
-if [ -d $HOME/usr/bin ]; then
-	PATH=$HOME/usr/bin:$PATH
-fi
-
-if [ -d $HOME/.local/bin ]; then
-	PATH=$HOME/.local/bin:$PATH
-fi
-
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (git:\1)/'
 }
